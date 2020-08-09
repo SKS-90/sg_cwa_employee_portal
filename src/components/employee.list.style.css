@@ -1,0 +1,10 @@
+.list-container{
+    background-color: bisque;
+    width: 50%;
+    height: 600px;
+    margin-top: 1%;
+}
+
+th, td {
+    padding: 15px;
+  }
