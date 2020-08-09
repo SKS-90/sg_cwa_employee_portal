@@ -7,15 +7,21 @@ class EmployeeList extends React.Component {
     constructor() {
         super();
         this.state = {
-            employeelist: []
+            employeelist: [],
+            msg: ''
         }
     }
 
     componentDidMount() {
-        console.log("componentdidmount");
         axios.get('http://localhost:8002/employee/getall')
             .then(response => {
-                this.setState(this.state.employeelist = [...response.data]);
+                if (response.data.length === 0) {
+                    this.setState({ msg: 'Not Yet Register Any Employee !' });
+                }
+                else {
+                    this.setState({ employeelist: [...response.data] });
+                }
+
             })
     }
 
@@ -23,23 +29,27 @@ class EmployeeList extends React.Component {
         return (
             <div className="list-container">
                 <h1>All Registered Employee</h1>
-                {this.state.employeelist.length===0 && <h4>Not Yet Register Any Employee !</h4>}
+                <h4>{this.state.msg}</h4>
                 <table>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Gender</th>
-                        <th>Date Of Birth</th>
-                        <th>Department</th>
-                    </tr>
-                    {this.state.employeelist.map((item) =>
+                    <thead>
                         <tr>
-                            <td>{item.firstName}</td>
-                            <td>{item.lastName}</td>
-                            <td>{item.gender}</td>
-                            <td>{item.dateOfBirth}</td>
-                            <td>{item.department}</td>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>Date Of Birth</th>
+                            <th>Department</th>
                         </tr>
+                    </thead>
+                    {this.state.employeelist.map((item) =>
+                        <thead key={item.id}>
+                            <tr >
+                                <td >{item.firstName}</td>
+                                <td >{item.lastName}</td>
+                                <td >{item.gender}</td>
+                                <td >{item.dateOfBirth}</td>
+                                <td >{item.department}</td>
+                            </tr>
+                        </thead>
                     )}
                 </table>
                 <Link to="/" className='link-text'>Back To Registration</Link>
