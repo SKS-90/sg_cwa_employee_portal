@@ -20,10 +20,10 @@ class EmployeeList extends React.Component {
     }
 
     render() {
-        console.log(this.state.employeelist.map((item) => item.firstName));
         return (
             <div className="list-container">
                 <h1>All Registered Employee</h1>
+                {this.state.employeelist.length===0 && <h4>Not Yet Register Any Employee !</h4>}
                 <table>
                     <tr>
                         <th>First Name</th>

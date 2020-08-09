@@ -1,15 +1,19 @@
 .signup-container{
     background-color: bisque;
     width: 50%;
-    height: 550px;
+    height: 580px;
     margin-top: 3%;
     margin-left: auto;
     margin-right: auto;
 }
 h1{
     padding-left: 10px;
+    padding-top: 10px;
 }
 
+.error-h4{
+    color: red;
+}
 .input-sub{
     margin-left: 60px;
     margin-right: 20px;

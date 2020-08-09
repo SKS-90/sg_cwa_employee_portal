@@ -7,7 +7,7 @@ class RegisterSuccess extends React.Component{
         return(
               <div className="container">
                     <h1> Successfully Registered </h1>
-                    <Link to="/allemployee">See all Registered employee </Link>
+                    <Link to="/allemployee" className='link-text'>See all Registered employee </Link>
                </div>
         )
     }
