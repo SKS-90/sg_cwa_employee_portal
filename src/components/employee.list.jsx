@@ -42,7 +42,7 @@ class EmployeeList extends React.Component {
                         </tr>
                     )}
                 </table>
-                <Link to="/">Back To Registration</Link>
+                <Link to="/" className='link-text'>Back To Registration</Link>
             </div>
         );
     }

@@ -2,5 +2,15 @@
     background-color: bisque;
     width: 50%;
     height: 550px;
-    margin-top: 1%;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    padding-left: 10px;
+}
+
+.input-sub{
+    margin-left: 60px;
+    margin-right: 20px;
 }
