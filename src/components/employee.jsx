@@ -74,7 +74,7 @@ class Employee extends React.Component {
             <input type="text" placeholder="Department" className="form-control" name="department" value={this.state.department} onChange={this.handleChange} />
           </div>
           <input className='input-sub' type="submit" value="Register"></input>
-          <Link to="/allemployee">See All Registered Employee </Link>
+          <Link to="/allemployee">See All Registered Employee</Link>
         </div>
       </form>
     )

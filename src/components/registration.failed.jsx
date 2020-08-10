@@ -5,7 +5,7 @@ class RegistartionFailed extends React.Component{
     render(){
         return(
               <div className="container">
-                    <h1> Registration Failed </h1>
+                    <h1>Registration Failed</h1>
                </div>
         )
     }
